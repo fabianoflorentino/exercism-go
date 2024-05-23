@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	lasagna "github.com/fabianoflorentino/exercism-go"
+)
 
 func main() {
-	fmt.Println("Hello, Exercism!")
+	fmt.Println(lasagna.OvenTime)
 }
