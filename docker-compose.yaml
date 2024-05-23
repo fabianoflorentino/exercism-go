@@ -1,0 +1,20 @@
+---
+version: '3.8'
+
+services:
+  exercism:
+    image: fabianoflorentino/exercism:go
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    networks:
+      - exercism
+    tty: true
+    stdin_open: true
+
+networks:
+  exercism:
+    driver: bridge
+    name: exercism
