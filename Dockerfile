@@ -12,4 +12,4 @@ RUN set -xe \
 
 
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "-c", "while true; do echo 'I\'m running...' && sleep 300; done" ]
+CMD [ "-c", "while true; do echo 'OK! Im running...' && sleep 300; done" ]
