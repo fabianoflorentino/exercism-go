@@ -11,6 +11,16 @@ import (
 	"time"
 )
 
+func main() {
+	exercismHelloWorld()
+	exercismLasagna()
+	exercismAnnalynsInfiltration()
+	exercismCarsAssemble()
+	exercismWeatherForecast()
+
+	fmt.Println(time.Now().Local())
+}
+
 func exercismLasagna() {
 	fmt.Println(lasagna.OvenTime)
 
@@ -38,13 +48,4 @@ func exercismCarsAssemble() {
 	fmt.Println(cars.CalculateWorkingCarsPerHour(221, 80))
 	fmt.Println(cars.CalculateWorkingCarsPerMinute(221, 80))
 	fmt.Println(cars.CalculateCost(221))
-}
-
-func main() {
-	// exercismHelloWorld()
-	// exercismLasagna()
-	// exercismAnnalynsInfiltration()
-	// exercismCarsAssemble()
-	// exercismWeatherForecast()
-	fmt.Println(time.Now().Local())
 }
