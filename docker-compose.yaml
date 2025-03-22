@@ -1,6 +1,4 @@
 ---
-version: '3.8'
-
 services:
   exercism:
     image: fabianoflorentino/exercism:go
