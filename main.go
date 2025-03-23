@@ -6,6 +6,7 @@ import (
 	cars "exercism/go/cars-assemble"
 	greeting "exercism/go/hello-world"
 	lasagna "exercism/go/lasagna"
+	needforspeed "exercism/go/need-for-speed"
 	weather "exercism/go/weather-forecast"
 
 	"flag"
@@ -19,6 +20,7 @@ func main() {
 	carsAssembleFlag := flag.Bool("cars-assemble", false, "Run the cars-assemble exercism")
 	blackJackFlag := flag.Bool("blackjack", false, "Run the blackjack exercism")
 	lasagnaFlag := flag.Bool("lasagna", false, "Run the lasagna exercism")
+	needForSpeedFlag := flag.Bool("need-for-speed", false, "Run the need-for-speed exercism")
 
 	flag.Parse()
 
@@ -39,6 +41,9 @@ func main() {
 	}
 	if *lasagnaFlag {
 		exercismLasagna()
+	}
+	if *needForSpeedFlag {
+		exercismNeedForSpeed()
 	}
 }
 
@@ -74,4 +79,10 @@ func exercismCarsAssemble() {
 func exercismBlackJack() {
 	println(blackjack.ParseCard("ace"))
 	println(blackjack.FirstTurn("two", "two", "ace"))
+}
+
+func exercismNeedForSpeed() {
+	car := needforspeed.NewCar(10, 3)
+	fmt.Println(needforspeed.Drive(car))
+	fmt.Println(needforspeed.CanFinish(car, needforspeed.NewTrack(50)))
 }
