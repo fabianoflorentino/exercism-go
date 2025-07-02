@@ -1,4 +1,4 @@
-FROM golang:alpine3.21 as builder
+FROM golang:alpine3.22 as builder
 
 WORKDIR /exercism
 
